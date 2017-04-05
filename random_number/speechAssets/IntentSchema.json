@@ -1,0 +1,22 @@
+{
+  "intents": [
+    {
+      "intent": "FlipCoin"
+    },
+    {
+      "intent": "RollDie"
+    },
+    {
+      "intent": "RandomNumber"
+    },
+    {
+      "intent": "AMAZON.HelpIntent"
+    },
+    {
+      "intent": "AMAZON.StopIntent"
+    },
+    {
+      "intent": "AMAZON.CancelIntent"
+    }
+  ]
+}

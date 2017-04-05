@@ -1,0 +1,11 @@
+FlipCoin flip a coin
+FlipCoin do a coin flip
+RollDie roll a dice
+RollDie do a dice roll
+RandomNumber a number
+RandomNumber a random number
+RandomNumber for a number
+RandomNumber for a random number
+RandomNumber give me a number
+RandomNumber give me a random number
+RandomNumber generate a random number

@@ -1,0 +1,12 @@
+Play play again
+Play let's play
+Play play a game
+Play play the game
+Play play the number game
+
+Guess {number}
+
+AMAZON.StopIntent stop
+AMAZON.StopIntent quit
+AMAZON.StopIntent give up
+AMAZON.StopIntent I give up

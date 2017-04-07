@@ -1,23 +1,25 @@
 {
   "intents": [
     {
-      "intent": "FlipCoin"
+      "intent": "Play"
     },
     {
-      "intent": "RollDie"
-    },
-    {
-      "intent": "RandomNumber",
+      "intent": "Guess",
       "slots": [
         {
-          "name": "low",
-          "type": "AMAZON.NUMBER"
-        },
-        {
-          "name": "high",
+          "name": "number",
           "type": "AMAZON.NUMBER"
         }
       ]
+    },
+    {
+      "intent": "NotPlaying"
+    },
+    {
+      "intent": "AMAZON.YesIntent"
+    },
+    {
+      "intent": "AMAZON.NoIntent"
     },
     {
       "intent": "AMAZON.HelpIntent"

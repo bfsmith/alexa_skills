@@ -9,3 +9,19 @@ RandomNumber for a random number
 RandomNumber give me a number
 RandomNumber give me a random number
 RandomNumber generate a random number
+
+RandomNumber a number between {low} and {high}
+RandomNumber a random number between {low} and {high}
+RandomNumber for a number between {low} and {high}
+RandomNumber for a random number between {low} and {high}
+RandomNumber give me a number between {low} and {high}
+RandomNumber give me a random number between {low} and {high}
+RandomNumber generate a random number between {low} and {high}
+
+RandomNumber a number from {low} to {high}
+RandomNumber a random number from {low} to {high}
+RandomNumber for a number from {low} to {high}
+RandomNumber for a random number from {low} to {high}
+RandomNumber give me a number from {low} to {high}
+RandomNumber give me a random number from {low} to {high}
+RandomNumber generate a random number from {low} to {high}

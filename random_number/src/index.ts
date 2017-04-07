@@ -48,7 +48,13 @@ const handlers = {
     this.emit(':tell', `You rolled a ${num}.`);
   },
   'RandomNumber': function () {
-    const num = randomNumber(0, 100);
+    const slots = this.event.request.intent.slots;
+    const l = slots["low"].value != undefined ? slots["low"].value : 0;
+    const h = slots["high"].value != undefined ? slots["high"].value : 100;
+    const low = Math.min(l, h);
+    const high = Math.max(l, h);
+
+    const num = randomNumber(low, high);
     this.emit(':tell', `You got ${num}.`);
   },
   'AMAZON.HelpIntent': function () {

@@ -11,14 +11,12 @@ export const handler = function (event, context, callback) {
 const languageStrings = {
   "en": {
     "translation": {
-      START_MESSAGE: "I'm thinking of a number between 1 and 10.",
+      START_MESSAGE: "I'm thinking of a number between 1 and 100.",
       PLAY_MESSAGE: "Guess a number.",
       TOO_HIGH_MESSAGE: "My number is lower than ",
       TOO_LOW_MESSAGE: "My number is higher than ",
       GUESS_AGAIN_MESSAGE: "Guess again",
       CORRECT_MESSAGE: "You're correct, the number was ",
-      WIN_MESSAGE_PREFIX: "You've won ",
-      WIN_MESSAGE_POSTFIX: " games.",
       PLAY_AGAIN_MESSAGE: "Want to play again?",
       HELP_MESSAGE: "You can ask to play the game or say stop.",
       HELP_REPROMPT: "What would you like to do?",
@@ -44,7 +42,7 @@ const handlers = {
   //   this.emit('Play');
   // },
   'Play': function () {
-    this.attributes.num = randomNumber(1, 10);
+    this.attributes.num = randomNumber(1, 100);
     this.emit(':ask', this.t("START_MESSAGE"), this.t("PLAY_MESSAGE"));
   },
   'Guess': function () {
@@ -57,11 +55,11 @@ const handlers = {
     }
     if (guess == num) {
       this.attributes.num = undefined;
-      this.emit(':ask', this.t("CORRECT_MESSAGE") + guess + ". " + this.t('PLAY_AGAIN_MESSAGE'));
+      this.emit(':ask', this.t("CORRECT_MESSAGE") + guess + ". " + this.t('PLAY_AGAIN_MESSAGE'), this.t('PLAY_AGAIN_MESSAGE'));
     } else if (guess < num) {
-      this.emit(':ask', this.t("TOO_LOW_MESSAGE") + guess + ". " + this.t("GUESS_AGAIN_MESSAGE"));
+      this.emit(':ask', this.t("TOO_LOW_MESSAGE") + guess + ". " + this.t('PLAY_AGAIN_MESSAGE'), this.t("GUESS_AGAIN_MESSAGE"));
     } else {
-      this.emit(':ask', this.t("TOO_HIGH_MESSAGE") + guess + ". " + this.t("GUESS_AGAIN_MESSAGE"));
+      this.emit(':ask', this.t("TOO_HIGH_MESSAGE") + guess + ". " + this.t('PLAY_AGAIN_MESSAGE'), this.t("GUESS_AGAIN_MESSAGE"));
     }
   },
   'NotPlaying': function () {
